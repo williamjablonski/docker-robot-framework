@@ -1,7 +1,7 @@
 FROM fedora:36
 
-MAINTAINER Paul Podgorsek <ppodgorsek@users.noreply.github.com>
-LABEL description Robot Framework in Docker.
+MAINTAINER William M Jablonski <william.jablonski@ntconsultcorp.com>
+LABEL description Robot Framework in Docker to Birdx.com
 
 # Set the reports directory environment variable
 ENV ROBOT_REPORTS_DIR /opt/robotframework/reports
@@ -90,6 +90,7 @@ RUN pip3 install \
   robotframework-requests==$REQUESTS_VERSION \
   robotframework-seleniumlibrary==$SELENIUM_LIBRARY_VERSION \
   robotframework-sshlibrary==$SSH_LIBRARY_VERSION \
+  RESTinstance==1.3.0 \
   axe-selenium-python==$AXE_SELENIUM_LIBRARY_VERSION \
   PyYAML \
   # Install awscli to be able to upload test reports to AWS S3
